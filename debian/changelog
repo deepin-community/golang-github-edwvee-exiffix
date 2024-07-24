@@ -1,5 +1,12 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-edwvee-exiffix (0.0~git20240229.0dbb146-2) unstable; urgency=medium
 
-  * Initial release
+  * Team Upload.
+    + Source-only upload for testing migration.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Nilesh Patra <nilesh@iki.fi>  Fri, 03 May 2024 14:22:46 +0530
+
+golang-github-edwvee-exiffix (0.0~git20240229.0dbb146-1) unstable; urgency=medium
+
+  * Initial release (Closes: #1069057)
+
+ -- Maytham Alsudany <maytha8thedev@gmail.com>  Thu, 18 Apr 2024 16:01:50 +0530

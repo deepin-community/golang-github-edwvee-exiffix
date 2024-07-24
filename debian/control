@@ -1,15 +1,32 @@
-Source: template-repository
-Section: unknown
+Source: golang-github-edwvee-exiffix
+Section: golang
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Uploaders: Maytham Alsudany <maytha8thedev@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-golang,
+ golang-any,
+ golang-github-disintegration-imaging-dev,
+ golang-github-rwcarlsen-goexif-dev,
+Testsuite: autopkgtest-pkg-go
+Standards-Version: 4.7.0
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-edwvee-exiffix
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-edwvee-exiffix.git
+Homepage: https://github.com/edwvee/exiffix
+XS-Go-Import-Path: github.com/edwvee/exiffix
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: golang-github-edwvee-exiffix-dev
+Architecture: all
+Multi-Arch: foreign
+Depends:
+ golang-github-disintegration-imaging-dev,
+ golang-github-rwcarlsen-goexif-dev,
+ ${misc:Depends},
+Description: EXIF orientation correct replacement for golang's image.Decode (library)
+ Exiffix is a one function golang library made to be a replacement for
+ image.Decode to handle orientation stored in EXIF data.
+ .
+ exiffix.Decode has mostly the same signature as image.Decode. The difference
+ is that it requires io.ReadSeeker instead of io.Seeker.
